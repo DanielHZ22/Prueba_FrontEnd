@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Poke</title>
+    <link href="styles.css" rel="stylesheet">
+    <!-- Tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Enlace de boton flotante -->
+    <a href="https://pokeapi.co/" class="btn-flotante">PokeAPI</a>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+<!-- Estrucutura de pokedex caja y tabla -->
+  <body>
+    <div class="cajaCentral">
+        <div class="tituloContainer"><strong>POKEDEX</strong></div><br>
+          <input type="text" placeholder="Inserte nombre" id="pokeNombre" name="boton" style="width: 200px; height: 20px;" class="inputRedondear"><br>
+          <img src="./pokeball.jpg" alt="inicio" id="ImgPoke" class="imgPokemon imgRedondear"><br>
+        <div id="pokeHabilidad"></div>
+<!-- Tabla de stats -->
+      <table class="tablaRedondear" hidden id="pokeTabla">
+        <thead>
+          <tr>
+            <th>Stat</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody id="pokeStat"></tbody>
+      </table>
+<!-- Boton de busqueda -->
+      <button onclick="fetchPokemon()" class="btnBuscar" style="width: 200px; height: 40px;"><span>Buscar</span></button>
+    </div>
+  </body>
+  <footer>
+    <script src="/pokedex.js"></script>
+  </footer>
+</html>
